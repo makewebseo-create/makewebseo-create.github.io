@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Every Cooler Review You Read Was Measured in Someone Else's Room</title>
+<style>
+  :root { color-scheme: light dark; --fg:#16181d; --bg:#fff; --mut:#5c6370; --accent:#2d6cdf; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e6e8ec; --bg:#14161a; --mut:#9aa2ae; --accent:#6f9bf0; }
+  }
+  body { margin:0; padding:40px 16px; background:var(--bg); color:var(--fg);
+         font:17px/1.7 Georgia, "Times New Roman", serif; }
+  main { max-width:44rem; margin:0 auto; }
+  h1 { font-size:1.9rem; line-height:1.25; margin:0 0 1.5rem; }
+  h2 { font-size:1.25rem; margin:2rem 0 .75rem; }
+  a { color:var(--accent); }
+  footer { margin-top:3rem; color:var(--mut); font-size:.9rem; }
+</style>
+</head>
+<body><main>
+<h1>Every Cooler Review You Read Was Measured in Someone Else's Room</h1>
+<p>A reviewer somewhere in Europe mounts a CPU cooler on a test bench, runs a sustained load, and publishes 78°C. You buy the same cooler, install it in a bedroom in Bangkok in April, run the same load, and watch it settle at 89°C. Nothing is defective. The cooler is doing precisely what it did on the bench.</p>
+<p>Coolers do not set temperatures. They set the gap between a component and the air around it — delta-T — and that gap is the only number that transfers between rooms. If a tower cooler holds a 57°C gap under load, it produces 78°C in a 21°C lab and 89°C in a 32°C room. Same cooler, same paste, same fan curve. The eleven degrees came from the room, not the hardware.</p>
+<p>Check the methodology page of any review you trust. Most of them publish their ambient, and it is usually somewhere near 21–22°C, because that is what a European or North American office sits at year-round. Now measure your own. An air-conditioned Thai room at 25–26°C is already four degrees past the lab. A room with a ceiling fan and open windows during the hot season is often in the low thirties, and a case sitting on the floor next to a wall is pulling air warmer than whatever your thermometer says.</p>
+<p>This would be a trivia point if thermal limits scaled with ambient. They don't. Throttle ceilings are absolute values baked into firmware — a GPU hotspot limit, a CPU package limit, an NVMe controller's threshold — and they don't move because your room is hot. Every degree of ambient you add comes straight out of your headroom, one for one. The review that showed nine degrees of margin before throttling has, in your room, none.</p>
+<p>What you actually lose is subtler than a throttle warning, which is why most people never diagnose it. Modern GPUs and CPUs don't wait for the ceiling to start backing off; boost algorithms step clocks down in small increments as temperature climbs, long before anything reports a problem. Your card runs, the game runs, the frame rate is simply lower than the benchmark chart said — and the 1% lows are worse than the average, because sustained load is exactly when the room has heated up and the case has stopped being able to dump heat. Nobody files a support ticket over this. They just quietly conclude the card was overhyped.</p>
+<p>Once you accept the delta-T framing, component choices reorder themselves.</p>
+<p>Case airflow stops being an aesthetic preference. A sealed tempered-glass front panel costs you a few degrees in a cool room and considerably more in a hot one, because as intake air gets warmer, the only lever left is moving more of it. Mesh is not a style; it is the cheapest thermal upgrade on the list, and it is usually cheaper than the cooler you'd otherwise buy to compensate.</p>
+<p>Fan curves need rewriting rather than tweaking. A curve authored around absolute temperatures — quiet until 60°C, ramping to 80°C — behaves completely differently when idle already sits at 45°C. You will get a machine that is audible at the desktop and out of ramp headroom under load, which is the worst of both trades. Set the quiet zone relative to your real idle, and accept that in a 32°C room, silent and cool are further apart than the reviews suggest.</p>
+<p>Power supplies deserve a look most builders never give them. Turn yours over and read the label: manufacturers state continuous rated output at a specific ambient, and many list 40°C or 50°C. That figure is about the air entering the PSU, which — in a bottom-mounted layout drawing through a floor-level filter in a hot room — is not the number on your wall thermometer. A unit chosen with no margin over a transient-heavy GPU is a unit chosen twice.</p>
+<p>Dust is the slow version of the same problem. Filters that need cleaning quarterly in a dry climate clog faster here, and a clogged filter raises intake temperature, which raises delta-T's starting point, which eats the headroom you just paid for. A build that was fine in month one degrades in month eight without a single component failing.</p>
+<p>Prebuilt buyers can run the same arithmetic without owning a screwdriver. Open the listing photos for [คอมพิวเตอร์เกมมิ่ง จาก ITBiret](https://itbiret.co.th) or any other Thai seller and look at the chassis before you look at the GPU model: is the front panel mesh or glass, how many intake fans are actually fitted versus merely supported, and is there an exhaust at the rear. Two machines with identical part lists and different cases are not identical machines in a Thai room, and the case is the part nobody puts in the product title.</p>
+<p>None of this argues for over-buying. It argues for spending the same budget in a different order. The builder who puts an extra thousand baht into a mesh case and a decent set of intake fans, then buys the GPU tier the remaining budget allows, will usually see higher sustained frame rates than the builder who bought the next tier up and suffocated it — because the faster card only delivers its advantage when it can hold its clocks, and holding clocks is a thermal problem before it is a silicon one.</p>
+<p>The practical method takes ten minutes. Measure your room during the hours you actually game, not at 8am. Take the delta between your ambient and the reviewer's, add it to every published temperature you've been using to make decisions, and see which of those decisions survive. Some will. The ones that don't were never decisions about hardware quality — they were decisions made in a room you've never been in.</p>
+<footer>ITBiret</footer>
+</main></body>
+</html>
